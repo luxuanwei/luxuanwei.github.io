@@ -64,6 +64,177 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-nodejs入门及应用" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2016/03/15/nodejs入门及应用/" class="article-date">
+  <time datetime="2016-03-15T09:02:42.000Z" itemprop="datePublished">2016-03-15</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/03/15/nodejs入门及应用/">nodejs常用案例分析 </a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h2><p>Node.js是一个基于Chrome JavaScript运行时建立的平台， 用于方便地搭建响应速度快、易于扩展的网络应用。</p>
+<p>Node.js 使用事件驱动， 非阻塞I/O 模型而得以轻量和高效，非常适合在分布式设备上运行的数据密集型的实时应用。</p>
+<h2 id="nodejs-常用命令"><a href="#nodejs-常用命令" class="headerlink" title="nodejs 常用命令"></a>nodejs 常用命令</h2><pre><code>console.log(&quot;Hello World&quot;);    输出
+</code></pre><h2 id="搭建gitbook"><a href="#搭建gitbook" class="headerlink" title="搭建gitbook"></a>搭建gitbook</h2><p>准备：安装 node.js</p>
+<p>第一步：安装gitbook</p>
+<pre><code>npm install gitbook -gitbook
+</code></pre><p>第二步：准备两个基本文件</p>
+<ul>
+<li><p>README.md</p>
+</li>
+<li><p>SUMMARY.md</p>
+</li>
+</ul>
+<p>第三步：本地运行</p>
+<pre><code>gitbook serve -p 8080
+</code></pre><h2 id="搭建hexo-博客"><a href="#搭建hexo-博客" class="headerlink" title="搭建hexo 博客"></a>搭建hexo 博客</h2><p>具体见 “通过github和hexo布局博客”</p>
+<pre><code>npm install -g hexo
+npm install hexo-server
+npm install hexo-deployer-git --save
+</code></pre>
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2016/03/15/nodejs入门及应用/" data-id="cilt7so210001jcuo62sfmxmt" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Java/">Java</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-Docker常用命令" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2016/03/15/Docker常用命令/" class="article-date">
+  <time datetime="2016-03-15T03:38:42.000Z" itemprop="datePublished">2016-03-15</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/03/15/Docker常用命令/"> Docker常用命令 </a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="Docker-Linux安装篇"><a href="#Docker-Linux安装篇" class="headerlink" title="Docker Linux安装篇"></a>Docker Linux安装篇</h2><pre><code>sudo apt-get uodate
+sudo apt-repostry ppa:docker-maint/testing
+sudo apt-get install docker.io
+</code></pre><h2 id="Docker-基本概念"><a href="#Docker-基本概念" class="headerlink" title="Docker 基本概念"></a>Docker 基本概念</h2><pre><code>Docker Daemon 运行在一个主机上
+Docker Client 访问在Docker的渠道
+Docker Images 一个只读模板
+Docker Registry 存放Images的仓库
+Docker Containers 文件夹/实例
+</code></pre><h2 id="Docker-常用命令"><a href="#Docker-常用命令" class="headerlink" title="Docker 常用命令"></a>Docker 常用命令</h2><pre><code>docker version      查看容器版本
+docker build -t     根据dockerfile创建镜像
+docker images       查看本机镜像
+docker history      查看镜像创建各种版本
+docker run -d       创建镜像的容器
+docker ps           查看正在运行的容器
+docker pull         拉取镜像
+docker push         上传镜像
+docker rmi $(docker images -q)   删除本机镜像 
+docker stop $(docker ps -a -q)   停止本机容器
+</code></pre><h2 id="蜂巢使用命令"><a href="#蜂巢使用命令" class="headerlink" title="蜂巢使用命令"></a>蜂巢使用命令</h2><p>1.登陆蜂巢</p>
+<pre><code>docker login -u 13962751479 -p jsntlxw1 -e 13962751479 hub.c.163.com
+</code></pre><p>2.推送镜像</p>
+<pre><code>docker tag [image-name] hub.c.163.com/luxuanwei/
+docker pull hub.163.com/luxuanwei/
+</code></pre><p>3.镜像加速</p>
+<pre><code>DOKCER_OPTS=&quot;--registry-mirror http://hub-mirror.c.163.com&quot;
+</code></pre>
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2016/03/15/Docker常用命令/" data-id="cilt7so1t0000jcuovcl73t5e" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Github/">Github</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-Linux常用命令" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2016/03/15/Linux常用命令/" class="article-date">
+  <time datetime="2016-03-15T03:38:42.000Z" itemprop="datePublished">2016-03-15</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/03/15/Linux常用命令/">Linux 常用命令 </a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="Linux常用命令"><a href="#Linux常用命令" class="headerlink" title="Linux常用命令"></a>Linux常用命令</h2><h3 id="ubuntu常用命令"><a href="#ubuntu常用命令" class="headerlink" title="ubuntu常用命令"></a>ubuntu常用命令</h3><pre><code>apt-get update  更新系统
+apt-get upgrade 升级已安装所有软件包
+apt-get install -y nano 安装nano编辑器
+cd ..           进入上一层
+wget [url]      下载地址
+tar xzf         解压
+./configure     源代码安装
+make [option: target_name]  编译安装
+touch           新建文件
+mkdir           新建文件夹
+vi/nano         编辑文件
+</code></pre><h3 id="centos常用命令"><a href="#centos常用命令" class="headerlink" title="centos常用命令"></a>centos常用命令</h3><pre><code>yum install update 更新系统
+yum 
+</code></pre>
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2016/03/15/Linux常用命令/" data-id="cilt7so280003jcuoz1pdpqij" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Linux/">Linux</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
     <article id="post-使用github工具直接在蜂巢上部署2048" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2016/03/15/使用github工具直接在蜂巢上部署2048/" class="article-date">
@@ -120,10 +291,72 @@ ENTRYPOINT [&quot;/usr/share/tomcat7/bin/catalina.sh&quot;, &quot;run&quot; ]
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2016/03/15/使用github工具直接在蜂巢上部署2048/" data-id="cilt1u1jk0001xouojq3v14xq" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2016/03/15/使用github工具直接在蜂巢上部署2048/" data-id="cilt7so2d0006jcuouhct70ob" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Github/">Github</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-在蜂巢部署kangle服务器" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2016/03/15/在蜂巢部署kangle服务器/" class="article-date">
+  <time datetime="2016-03-15T03:38:42.000Z" itemprop="datePublished">2016-03-15</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/03/15/在蜂巢部署kangle服务器/">在蜂巢部署kangle服务器 </a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="创建容器"><a href="#创建容器" class="headerlink" title="创建容器"></a>创建容器</h2><p>在蜂巢选择ubuntu容器</p>
+<h2 id="配置环境"><a href="#配置环境" class="headerlink" title="配置环境"></a>配置环境</h2><p>在ubuntu系统上安装g++，libz开发包，libpcre开发包，libiconv开发包，make工具</p>
+<pre><code>apt-get update
+apt-get install make
+apt-get install gcc build-essential -y
+apt-get install libpcre3 libpcre3-dev
+apt-get install openssl 
+apt-get install libssl-dev
+apt-get install sqlite
+apt-get install lib32stdc++6
+</code></pre><p>下载源代码</p>
+<pre><code>wget http://download.kanglesoft.com/src/kangle-3.4.2.tar.gz
+</code></pre><p>解压</p>
+<pre><code>tar xzf kangle-3.4.2.tar.gz &amp;&amp; cd kangle-3.4.2    
+</code></pre><p>配置kangle源代码</p>
+<pre><code>./configure --prefix=/usr/local/kangle
+</code></pre><p>安装</p>
+<p>编译安装</p>
+<pre><code>make &amp;&amp; make install
+</code></pre><p>启动kangle</p>
+<pre><code>./src/kangle
+</code></pre><p>进入kangle管理</p>
+<pre><code>http://外网ip地址:3311/
+</code></pre><p>第一次进入输入 用户名admin,密码kangle</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2016/03/15/在蜂巢部署kangle服务器/" data-id="cilt7so2h0008jcuovw542les" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Docker/">Docker</a></li></ul>
 
     </footer>
   </div>
@@ -170,7 +403,7 @@ time = time[Math.floor(Math.random()*time.length)];
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2016/03/15/抽奖镜像的优化和使用/" data-id="cilt1u1jn0002xouon2h2i4t9" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2016/03/15/抽奖镜像的优化和使用/" data-id="cilt7so2b0004jcuoq4vznwqi" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JavaScript/">JavaScript</a></li></ul>
@@ -236,56 +469,11 @@ hexo s
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2016/03/15/通过github和hexo布局博客/" data-id="cilt1u1kd0007xouogpse5e2r" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2016/03/15/通过github和hexo布局博客/" data-id="cilt7so2k000ajcuot6sjohli" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Github/">Github</a></li></ul>
 
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-hello-world" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2016/03/14/hello-world/" class="article-date">
-  <time datetime="2016-03-14T07:13:33.314Z" itemprop="datePublished">2016-03-14</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/03/14/hello-world/">Hello World</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="external">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2016/03/14/hello-world/" data-id="cilt1u1jb0000xouomi9zlwuj" class="article-share-link">Share</a>
-      
-      
     </footer>
   </div>
   
@@ -305,7 +493,7 @@ hexo s
   <div class="widget-wrap">
     <h3 class="widget-title">标签</h3>
     <div class="widget">
-      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Github/">Github</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/JavaScript/">JavaScript</a></li></ul>
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Docker/">Docker</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Github/">Github</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Java/">Java</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/JavaScript/">JavaScript</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Linux/">Linux</a></li></ul>
     </div>
   </div>
 
@@ -315,7 +503,7 @@ hexo s
   <div class="widget-wrap">
     <h3 class="widget-title">标签云</h3>
     <div class="widget tagcloud">
-      <a href="/tags/Github/" style="font-size: 20px;">Github</a> <a href="/tags/JavaScript/" style="font-size: 10px;">JavaScript</a>
+      <a href="/tags/Docker/" style="font-size: 10px;">Docker</a> <a href="/tags/Github/" style="font-size: 20px;">Github</a> <a href="/tags/Java/" style="font-size: 10px;">Java</a> <a href="/tags/JavaScript/" style="font-size: 10px;">JavaScript</a> <a href="/tags/Linux/" style="font-size: 10px;">Linux</a>
     </div>
   </div>
 
@@ -337,19 +525,23 @@ hexo s
       <ul>
         
           <li>
+            <a href="/2016/03/15/nodejs入门及应用/">nodejs常用案例分析 </a>
+          </li>
+        
+          <li>
+            <a href="/2016/03/15/Docker常用命令/"> Docker常用命令 </a>
+          </li>
+        
+          <li>
+            <a href="/2016/03/15/Linux常用命令/">Linux 常用命令 </a>
+          </li>
+        
+          <li>
             <a href="/2016/03/15/使用github工具直接在蜂巢上部署2048/">使用github工具直接在蜂巢上部署2048 </a>
           </li>
         
           <li>
-            <a href="/2016/03/15/抽奖镜像的优化和使用/">抽奖镜像的优化和使用 </a>
-          </li>
-        
-          <li>
-            <a href="/2016/03/15/通过github和hexo布局博客/">通过github和hexo布局博客 </a>
-          </li>
-        
-          <li>
-            <a href="/2016/03/14/hello-world/">Hello World</a>
+            <a href="/2016/03/15/在蜂巢部署kangle服务器/">在蜂巢部署kangle服务器 </a>
           </li>
         
       </ul>

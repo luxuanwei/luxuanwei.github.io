@@ -3,17 +3,36 @@
 <head>
   <meta charset="utf-8">
   
-  <title>归档: 2016 | Universe Dream</title>
+  <title> Docker常用命令  | Universe Dream</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Universe Dream">
-<meta property="og:url" content="http://yoursite.com/archives/2016/index.html">
+  <meta name="description" content="Docker Linux安装篇sudo apt-get uodate
+sudo apt-repostry ppa:docker-maint/testing
+sudo apt-get install docker.io
+Docker 基本概念Docker Daemon 运行在一个主机上
+Docker Client 访问在Docker的渠道
+Docker Images 一个只读模板
+Docker Re">
+<meta property="og:type" content="article">
+<meta property="og:title" content=" Docker常用命令 ">
+<meta property="og:url" content="http://yoursite.com/2016/03/15/Docker常用命令/index.html">
 <meta property="og:site_name" content="Universe Dream">
-<meta property="og:description">
+<meta property="og:description" content="Docker Linux安装篇sudo apt-get uodate
+sudo apt-repostry ppa:docker-maint/testing
+sudo apt-get install docker.io
+Docker 基本概念Docker Daemon 运行在一个主机上
+Docker Client 访问在Docker的渠道
+Docker Images 一个只读模板
+Docker Re">
+<meta property="og:updated_time" content="2016-03-15T08:00:16.308Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Universe Dream">
-<meta name="twitter:description">
+<meta name="twitter:title" content=" Docker常用命令 ">
+<meta name="twitter:description" content="Docker Linux安装篇sudo apt-get uodate
+sudo apt-repostry ppa:docker-maint/testing
+sudo apt-get install docker.io
+Docker 基本概念Docker Daemon 运行在一个主机上
+Docker Client 访问在Docker的渠道
+Docker Images 一个只读模板
+Docker Re">
   
     <link rel="alternate" href="/atom.xml" title="Universe Dream" type="application/atom+xml">
   
@@ -62,153 +81,87 @@
   </div>
 </header>
       <div class="outer">
-        <section id="main">
-  
-  
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2016" class="archive-year">2016</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2016/03/15/nodejs入门及应用/" class="archive-article-date">
-  <time datetime="2016-03-15T09:02:42.000Z" itemprop="datePublished">3月 15</time>
+        <section id="main"><article id="post-Docker常用命令" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2016/03/15/Docker常用命令/" class="article-date">
+  <time datetime="2016-03-15T03:38:42.000Z" itemprop="datePublished">2016-03-15</time>
 </a>
-      
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2016/03/15/nodejs入门及应用/">nodejs常用案例分析 </a>
+    <h1 class="article-title" itemprop="name">
+       Docker常用命令 
     </h1>
   
 
-    </header>
-  </div>
-</article>
-  
+      </header>
     
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2016/03/15/Docker常用命令/" class="archive-article-date">
-  <time datetime="2016-03-15T03:38:42.000Z" itemprop="datePublished">3月 15</time>
-</a>
+    <div class="article-entry" itemprop="articleBody">
       
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2016/03/15/Docker常用命令/"> Docker常用命令 </a>
-    </h1>
-  
-
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2016/03/15/Linux常用命令/" class="archive-article-date">
-  <time datetime="2016-03-15T03:38:42.000Z" itemprop="datePublished">3月 15</time>
-</a>
+        <h2 id="Docker-Linux安装篇"><a href="#Docker-Linux安装篇" class="headerlink" title="Docker Linux安装篇"></a>Docker Linux安装篇</h2><pre><code>sudo apt-get uodate
+sudo apt-repostry ppa:docker-maint/testing
+sudo apt-get install docker.io
+</code></pre><h2 id="Docker-基本概念"><a href="#Docker-基本概念" class="headerlink" title="Docker 基本概念"></a>Docker 基本概念</h2><pre><code>Docker Daemon 运行在一个主机上
+Docker Client 访问在Docker的渠道
+Docker Images 一个只读模板
+Docker Registry 存放Images的仓库
+Docker Containers 文件夹/实例
+</code></pre><h2 id="Docker-常用命令"><a href="#Docker-常用命令" class="headerlink" title="Docker 常用命令"></a>Docker 常用命令</h2><pre><code>docker version      查看容器版本
+docker build -t     根据dockerfile创建镜像
+docker images       查看本机镜像
+docker history      查看镜像创建各种版本
+docker run -d       创建镜像的容器
+docker ps           查看正在运行的容器
+docker pull         拉取镜像
+docker push         上传镜像
+docker rmi $(docker images -q)   删除本机镜像 
+docker stop $(docker ps -a -q)   停止本机容器
+</code></pre><h2 id="蜂巢使用命令"><a href="#蜂巢使用命令" class="headerlink" title="蜂巢使用命令"></a>蜂巢使用命令</h2><p>1.登陆蜂巢</p>
+<pre><code>docker login -u 13962751479 -p jsntlxw1 -e 13962751479 hub.c.163.com
+</code></pre><p>2.推送镜像</p>
+<pre><code>docker tag [image-name] hub.c.163.com/luxuanwei/
+docker pull hub.163.com/luxuanwei/
+</code></pre><p>3.镜像加速</p>
+<pre><code>DOKCER_OPTS=&quot;--registry-mirror http://hub-mirror.c.163.com&quot;
+</code></pre>
       
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2016/03/15/Linux常用命令/">Linux 常用命令 </a>
-    </h1>
-  
-
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2016/03/15/使用github工具直接在蜂巢上部署2048/" class="archive-article-date">
-  <time datetime="2016-03-15T03:38:42.000Z" itemprop="datePublished">3月 15</time>
-</a>
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2016/03/15/Docker常用命令/" data-id="cilt7so1t0000jcuovcl73t5e" class="article-share-link">Share</a>
       
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2016/03/15/使用github工具直接在蜂巢上部署2048/">使用github工具直接在蜂巢上部署2048 </a>
-    </h1>
-  
-
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2016/03/15/在蜂巢部署kangle服务器/" class="archive-article-date">
-  <time datetime="2016-03-15T03:38:42.000Z" itemprop="datePublished">3月 15</time>
-</a>
       
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2016/03/15/在蜂巢部署kangle服务器/">在蜂巢部署kangle服务器 </a>
-    </h1>
-  
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Github/">Github</a></li></ul>
 
-    </header>
+    </footer>
   </div>
-</article>
   
     
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2016/03/15/抽奖镜像的优化和使用/" class="archive-article-date">
-  <time datetime="2016-03-15T03:18:42.000Z" itemprop="datePublished">3月 15</time>
-</a>
-      
+<nav id="article-nav">
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2016/03/15/抽奖镜像的优化和使用/">抽奖镜像的优化和使用 </a>
-    </h1>
+    <a href="/2016/03/15/nodejs入门及应用/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          nodejs常用案例分析 
+        
+      </div>
+    </a>
   
+  
+    <a href="/2016/03/15/Linux常用命令/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">Linux 常用命令 </div>
+    </a>
+  
+</nav>
 
-    </header>
-  </div>
+  
 </article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2016/03/15/通过github和hexo布局博客/" class="archive-article-date">
-  <time datetime="2016-03-15T01:38:42.000Z" itemprop="datePublished">3月 15</time>
-</a>
-      
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2016/03/15/通过github和hexo布局博客/">通过github和hexo布局博客 </a>
-    </h1>
-  
-
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
-  
 
 </section>
         
