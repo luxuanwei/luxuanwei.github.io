@@ -120,7 +120,7 @@ ENTRYPOINT [&quot;/usr/share/tomcat7/bin/catalina.sh&quot;, &quot;run&quot; ]
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2016/03/15/使用github工具直接在蜂巢上部署2048/" data-id="cilsvhr060002kguo4gir9sfs" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2016/03/15/使用github工具直接在蜂巢上部署2048/" data-id="cilt1u1jk0001xouojq3v14xq" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Github/">Github</a></li></ul>
@@ -170,78 +170,11 @@ time = time[Math.floor(Math.random()*time.length)];
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2016/03/15/抽奖镜像的优化和使用/" data-id="cilsvhr090003kguo5fhflgmg" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2016/03/15/抽奖镜像的优化和使用/" data-id="cilt1u1jn0002xouon2h2i4t9" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JavaScript/">JavaScript</a></li></ul>
 
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-new" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2016/03/15/new/" class="article-date">
-  <time datetime="2016-03-15T01:49:16.025Z" itemprop="datePublished">2016-03-15</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/03/15/new/">通过github和hexo布局博客</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h2><p>此文档主要演示如何通过github和hexo进行博客的部署。</p>
-<h2 id="准备条件"><a href="#准备条件" class="headerlink" title="准备条件"></a>准备条件</h2><p>本地安装好github工具和nodejs工具，，可以点击官网直接下载安装。<br>准备一个github账号，并建立一个命名为 username.github.io 的仓库</p>
-<p>打开命令行，安装hexo</p>
-<pre><code>npm install -g hexo
-
-npm install hexo-server
-
-npm install hexo-deployer-git --save
-</code></pre><h2 id="快速上手"><a href="#快速上手" class="headerlink" title="快速上手"></a>快速上手</h2><p>在D盘建立hexo文件夹，用git bash打开</p>
-<p>输入命令</p>
-<pre><code>hexo init 
-
-hexo new “first passage”
-
-hexo g
-
-hexo s
-</code></pre><p>更改 _config.yml </p>
-<p>光标定位到最后三行，对以下配置进行更改</p>
-<p>deploy:</p>
-<pre><code>type: git
-
-repository: http://github.com/username/username.github.io.git
-
-branch: master&apos;
-</code></pre><p>ps:冒号后面需要空格，否则会无法读取，</p>
-<pre><code>hexo deploy
-</code></pre><h2 id="SSH密钥设置"><a href="#SSH密钥设置" class="headerlink" title="SSH密钥设置"></a>SSH密钥设置</h2><p>首先我们需要检查你电脑上现有的ssh key：</p>
-<p>‘ $ cd ~/. ssh 检查本机的ssh密钥 ‘</p>
-<p>生成新的SSH Key：</p>
-<p>‘$ ssh-keygen -t rsa -C 邮件地址@youremail.com’</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2016/03/15/new/" data-id="cilsvhr020001kguoq3atkd68" class="article-share-link">Share</a>
-      
-      
     </footer>
   </div>
   
@@ -275,30 +208,26 @@ branch: master&apos;
 <h2 id="准备条件"><a href="#准备条件" class="headerlink" title="准备条件"></a>准备条件</h2><p>本地安装好github工具和nodejs工具，，可以点击官网直接下载安装。<br>准备一个github账号，并建立一个命名为 username.github.io 的仓库</p>
 <p>打开命令行，安装hexo</p>
 <pre><code>npm install -g hexo
-
 npm install hexo-server
-
 npm install hexo-deployer-git --save
 </code></pre><h2 id="快速上手"><a href="#快速上手" class="headerlink" title="快速上手"></a>快速上手</h2><p>在D盘建立hexo文件夹，用git bash打开</p>
 <p>输入命令</p>
 <pre><code>hexo init 
-
 hexo new “first passage”
-
 hexo g
-
 hexo s
 </code></pre><p>更改 _config.yml </p>
 <p>光标定位到最后三行，对以下配置进行更改</p>
-<pre><code>deploy:
-
+<pre><code>deploy：
  type: git
-
  repository: http://github.com/username/username.github.io.git
-
  branch: master&apos;
 </code></pre><p>ps:冒号后面需要空格，否则会无法读取，</p>
 <pre><code>hexo deploy
+</code></pre><p>更新博客代码</p>
+<pre><code>hexo clean
+hexo g
+hexo s
 </code></pre><h2 id="SSH密钥设置"><a href="#SSH密钥设置" class="headerlink" title="SSH密钥设置"></a>SSH密钥设置</h2><p>首先我们需要检查你电脑上现有的ssh key：</p>
 <p>‘ $ cd ~/. ssh 检查本机的ssh密钥 ‘</p>
 <p>生成新的SSH Key：</p>
@@ -307,7 +236,7 @@ hexo s
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2016/03/15/通过github和hexo布局博客/" data-id="cilsvhr0h0005kguofy3in5uj" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2016/03/15/通过github和hexo布局博客/" data-id="cilt1u1kd0007xouogpse5e2r" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Github/">Github</a></li></ul>
@@ -354,7 +283,7 @@ hexo s
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2016/03/14/hello-world/" data-id="cilsvhqzv0000kguoacd1e2lg" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2016/03/14/hello-world/" data-id="cilt1u1jb0000xouomi9zlwuj" class="article-share-link">Share</a>
       
       
     </footer>
@@ -413,10 +342,6 @@ hexo s
         
           <li>
             <a href="/2016/03/15/抽奖镜像的优化和使用/">抽奖镜像的优化和使用 </a>
-          </li>
-        
-          <li>
-            <a href="/2016/03/15/new/">通过github和hexo布局博客</a>
           </li>
         
           <li>
