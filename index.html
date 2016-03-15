@@ -64,19 +64,147 @@
       <div class="outer">
         <section id="main">
   
-    <article id="post-new" class="article article-type-post" itemscope itemprop="blogPost">
+    <article id="post-使用github工具直接在蜂巢上部署2048" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/2016/03/14/new/" class="article-date">
-  <time datetime="2016-03-14T08:34:17.529Z" itemprop="datePublished">2016-03-14</time>
+    <a href="/2016/03/15/使用github工具直接在蜂巢上部署2048/" class="article-date">
+  <time datetime="2016-03-15T03:38:42.000Z" itemprop="datePublished">2016-03-15</time>
 </a>
     
   </div>
   <div class="article-inner">
     
     
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/03/15/使用github工具直接在蜂巢上部署2048/">使用github工具直接在蜂巢上部署2048 </a>
+    </h1>
+  
+
+      </header>
+    
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="通过github和hexo布局博客"><a href="#通过github和hexo布局博客" class="headerlink" title="通过github和hexo布局博客"></a>通过github和hexo布局博客</h1><h2 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h2><p>此文档主要演示如何通过github和hexo进行博客的部署。</p>
+        <h2 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h2><p>此文档主要演示以2048小游戏为例，如何使用github工具直接在蜂巢上部署各种网页。</p>
+<h2 id="准备条件"><a href="#准备条件" class="headerlink" title="准备条件"></a>准备条件</h2><p>1.本地创建Dockerfile和网页文档（war格式），这里给出tomcat的dockerfile</p>
+<pre><code>FROM ubuntu:latest
+
+ENV REFRESHED_AT 2015-7-28
+RUN apt-get -yqq update
+RUN apt-get -yqq install tomcat7 default-jdk
+
+ENV CATALINA_HOME /usr/share/tomcat7
+ENV CATALINA_BASE /var/lib/tomcat7
+ENV CATALINA_PID  /var/run/tomcat7.pid
+ENV CATALINA_SH   /usr/share/tomcat7/bin/catalina.sh
+ENV CATALINA_TMPDIR /tmp/tomcat7-tomcat7-tmp
+COPY ./ /var/lib/tomcat7/webapps
+
+RUN mkdir -p $CATALINA_TMPDIR
+VOLUME [&quot;/var/lib/tomcat7/webapps/&quot;]
+EXPOSE 8080 9000
+ENTRYPOINT [&quot;/usr/share/tomcat7/bin/catalina.sh&quot;, &quot;run&quot; ]
+</code></pre><p>2.将相应代码上传至github</p>
+<h2 id="快速上手"><a href="#快速上手" class="headerlink" title="快速上手"></a>快速上手</h2><p> 点击“创建服务”按钮，进入服务创建界面。</p>
+<p> 选择任意一个官方镜像（不需要是php），在Git地址处输入对应的github地址</p>
+<p>这里提供一个github地址</p>
+<p><a href="https://github.com/luxuanwei/2048.git" target="_blank" rel="external">https://github.com/luxuanwei/2048.git</a></p>
+<p>在Dockerfile处选择自定义，输入Dockerfile文件的源码中的路径。</p>
+<p>注：请将目的端口更改为8080</p>
+<h2 id="结果"><a href="#结果" class="headerlink" title="结果"></a>结果</h2><p>经过短暂的日志进度提示，容器很快创建成功，就可以直接看到容器挂载的外网IP</p>
+<p>现在直接在浏览器上打开界面上的地址，就可以快速访问刚成功创建的容器启动的服务</p>
+<p>  <a href="http://公网ip/2048" target="_blank" rel="external">http://公网ip/2048</a></p>
+<p>  通过这样的方法，我们的dockerfile就可以在不通过本地运行上传的方式直接在蜂巢上面运行了。</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2016/03/15/使用github工具直接在蜂巢上部署2048/" data-id="cilsvhr060002kguo4gir9sfs" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Github/">Github</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-抽奖镜像的优化和使用" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2016/03/15/抽奖镜像的优化和使用/" class="article-date">
+  <time datetime="2016-03-15T03:18:42.000Z" itemprop="datePublished">2016-03-15</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/03/15/抽奖镜像的优化和使用/">抽奖镜像的优化和使用 </a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>在网易实习的这段时间学到了蛮多的，除了docker，接触了挺多前沿的知识。</p>
+<p>其中有一个工作是在蜂巢上面部署一个抽奖网页，然后将其写入dockerfile文档。</p>
+<p>在实现的过程中，意外的重拾了一些JS方面的知识，下面是一些整理。</p>
+<p>JS中常用的弹窗</p>
+<pre><code>alert()
+</code></pre><p>变量初始化(可以初始化任何类型的值)</p>
+<pre><code>var time =[0,1];
+var i = 0;
+</code></pre><p>选取随机数</p>
+<pre><code>var time = [0,1]; //定义一个一维数组，里面包含0，1
+time = time[Math.floor(Math.random()*time.length)];  
+//取一个小数，接近1时取1，接近0时取0
+</code></pre>
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2016/03/15/抽奖镜像的优化和使用/" data-id="cilsvhr090003kguo5fhflgmg" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JavaScript/">JavaScript</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-new" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2016/03/15/new/" class="article-date">
+  <time datetime="2016-03-15T01:49:16.025Z" itemprop="datePublished">2016-03-15</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/03/15/new/">通过github和hexo布局博客</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h2><p>此文档主要演示如何通过github和hexo进行博客的部署。</p>
 <h2 id="准备条件"><a href="#准备条件" class="headerlink" title="准备条件"></a>准备条件</h2><p>本地安装好github工具和nodejs工具，，可以点击官网直接下载安装。<br>准备一个github账号，并建立一个命名为 username.github.io 的仓库</p>
 <p>打开命令行，安装hexo</p>
 <pre><code>npm install -g hexo
@@ -111,9 +239,79 @@ branch: master&apos;
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2016/03/14/new/" data-id="cilrw8phd000104uosxpyikjb" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2016/03/15/new/" data-id="cilsvhr020001kguoq3atkd68" class="article-share-link">Share</a>
       
       
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-通过github和hexo布局博客" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2016/03/15/通过github和hexo布局博客/" class="article-date">
+  <time datetime="2016-03-15T01:38:42.000Z" itemprop="datePublished">2016-03-15</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/03/15/通过github和hexo布局博客/">通过github和hexo布局博客 </a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h2><p>此文档主要演示如何通过github和hexo进行博客的部署。</p>
+<h2 id="准备条件"><a href="#准备条件" class="headerlink" title="准备条件"></a>准备条件</h2><p>本地安装好github工具和nodejs工具，，可以点击官网直接下载安装。<br>准备一个github账号，并建立一个命名为 username.github.io 的仓库</p>
+<p>打开命令行，安装hexo</p>
+<pre><code>npm install -g hexo
+
+npm install hexo-server
+
+npm install hexo-deployer-git --save
+</code></pre><h2 id="快速上手"><a href="#快速上手" class="headerlink" title="快速上手"></a>快速上手</h2><p>在D盘建立hexo文件夹，用git bash打开</p>
+<p>输入命令</p>
+<pre><code>hexo init 
+
+hexo new “first passage”
+
+hexo g
+
+hexo s
+</code></pre><p>更改 _config.yml </p>
+<p>光标定位到最后三行，对以下配置进行更改</p>
+<pre><code>deploy:
+
+ type: git
+
+ repository: http://github.com/username/username.github.io.git
+
+ branch: master&apos;
+</code></pre><p>ps:冒号后面需要空格，否则会无法读取，</p>
+<pre><code>hexo deploy
+</code></pre><h2 id="SSH密钥设置"><a href="#SSH密钥设置" class="headerlink" title="SSH密钥设置"></a>SSH密钥设置</h2><p>首先我们需要检查你电脑上现有的ssh key：</p>
+<p>‘ $ cd ~/. ssh 检查本机的ssh密钥 ‘</p>
+<p>生成新的SSH Key：</p>
+<p>‘$ ssh-keygen -t rsa -C 邮件地址@youremail.com’</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2016/03/15/通过github和hexo布局博客/" data-id="cilsvhr0h0005kguofy3in5uj" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Github/">Github</a></li></ul>
+
     </footer>
   </div>
   
@@ -156,7 +354,7 @@ branch: master&apos;
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2016/03/14/hello-world/" data-id="cilrw8ph4000004uofg21ud7g" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2016/03/14/hello-world/" data-id="cilsvhqzv0000kguoacd1e2lg" class="article-share-link">Share</a>
       
       
     </footer>
@@ -175,9 +373,23 @@ branch: master&apos;
 
   
     
+  <div class="widget-wrap">
+    <h3 class="widget-title">标签</h3>
+    <div class="widget">
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Github/">Github</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/JavaScript/">JavaScript</a></li></ul>
+    </div>
+  </div>
+
 
   
     
+  <div class="widget-wrap">
+    <h3 class="widget-title">标签云</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/Github/" style="font-size: 20px;">Github</a> <a href="/tags/JavaScript/" style="font-size: 10px;">JavaScript</a>
+    </div>
+  </div>
+
   
     
   <div class="widget-wrap">
@@ -196,7 +408,19 @@ branch: master&apos;
       <ul>
         
           <li>
-            <a href="/2016/03/14/new/">(no title)</a>
+            <a href="/2016/03/15/使用github工具直接在蜂巢上部署2048/">使用github工具直接在蜂巢上部署2048 </a>
+          </li>
+        
+          <li>
+            <a href="/2016/03/15/抽奖镜像的优化和使用/">抽奖镜像的优化和使用 </a>
+          </li>
+        
+          <li>
+            <a href="/2016/03/15/new/">通过github和hexo布局博客</a>
+          </li>
+        
+          <li>
+            <a href="/2016/03/15/通过github和hexo布局博客/">通过github和hexo布局博客 </a>
           </li>
         
           <li>

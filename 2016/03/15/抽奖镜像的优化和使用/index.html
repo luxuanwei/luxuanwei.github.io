@@ -3,21 +3,45 @@
 <head>
   <meta charset="utf-8">
   
-  <title>Hello World | Universe Dream</title>
+  <title>抽奖镜像的优化和使用  | Universe Dream</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub.
-Quick">
+  <meta name="description" content="前言在网易实习的这段时间学到了蛮多的，除了docker，接触了挺多前沿的知识。
+其中有一个工作是在蜂巢上面部署一个抽奖网页，然后将其写入dockerfile文档。
+在实现的过程中，意外的重拾了一些JS方面的知识，下面是一些整理。
+JS中常用的弹窗
+alert()
+变量初始化(可以初始化任何类型的值)
+var time =[0,1];
+var i = 0;
+选取随机数
+var time = [0,1">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Hello World">
-<meta property="og:url" content="http://yoursite.com/2016/03/14/hello-world/index.html">
+<meta property="og:title" content="抽奖镜像的优化和使用 ">
+<meta property="og:url" content="http://yoursite.com/2016/03/15/抽奖镜像的优化和使用/index.html">
 <meta property="og:site_name" content="Universe Dream">
-<meta property="og:description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub.
-Quick">
-<meta property="og:updated_time" content="2016-03-14T07:13:33.317Z">
+<meta property="og:description" content="前言在网易实习的这段时间学到了蛮多的，除了docker，接触了挺多前沿的知识。
+其中有一个工作是在蜂巢上面部署一个抽奖网页，然后将其写入dockerfile文档。
+在实现的过程中，意外的重拾了一些JS方面的知识，下面是一些整理。
+JS中常用的弹窗
+alert()
+变量初始化(可以初始化任何类型的值)
+var time =[0,1];
+var i = 0;
+选取随机数
+var time = [0,1">
+<meta property="og:updated_time" content="2016-03-15T03:40:31.442Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Hello World">
-<meta name="twitter:description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub.
-Quick">
+<meta name="twitter:title" content="抽奖镜像的优化和使用 ">
+<meta name="twitter:description" content="前言在网易实习的这段时间学到了蛮多的，除了docker，接触了挺多前沿的知识。
+其中有一个工作是在蜂巢上面部署一个抽奖网页，然后将其写入dockerfile文档。
+在实现的过程中，意外的重拾了一些JS方面的知识，下面是一些整理。
+JS中常用的弹窗
+alert()
+变量初始化(可以初始化任何类型的值)
+var time =[0,1];
+var i = 0;
+选取随机数
+var time = [0,1">
   
     <link rel="alternate" href="/atom.xml" title="Universe Dream" type="application/atom+xml">
   
@@ -66,10 +90,10 @@ Quick">
   </div>
 </header>
       <div class="outer">
-        <section id="main"><article id="post-hello-world" class="article article-type-post" itemscope itemprop="blogPost">
+        <section id="main"><article id="post-抽奖镜像的优化和使用" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/2016/03/14/hello-world/" class="article-date">
-  <time datetime="2016-03-14T07:13:33.314Z" itemprop="datePublished">2016-03-14</time>
+    <a href="/2016/03/15/抽奖镜像的优化和使用/" class="article-date">
+  <time datetime="2016-03-15T03:18:42.000Z" itemprop="datePublished">2016-03-15</time>
 </a>
     
   </div>
@@ -80,7 +104,7 @@ Quick">
         
   
     <h1 class="article-title" itemprop="name">
-      Hello World
+      抽奖镜像的优化和使用 
     </h1>
   
 
@@ -88,37 +112,47 @@ Quick">
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="external">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>
-
+        <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>在网易实习的这段时间学到了蛮多的，除了docker，接触了挺多前沿的知识。</p>
+<p>其中有一个工作是在蜂巢上面部署一个抽奖网页，然后将其写入dockerfile文档。</p>
+<p>在实现的过程中，意外的重拾了一些JS方面的知识，下面是一些整理。</p>
+<p>JS中常用的弹窗</p>
+<pre><code>alert()
+</code></pre><p>变量初始化(可以初始化任何类型的值)</p>
+<pre><code>var time =[0,1];
+var i = 0;
+</code></pre><p>选取随机数</p>
+<pre><code>var time = [0,1]; //定义一个一维数组，里面包含0，1
+time = time[Math.floor(Math.random()*time.length)];  
+//取一个小数，接近1时取1，接近0时取0
+</code></pre>
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2016/03/14/hello-world/" data-id="cilsvhqzv0000kguoacd1e2lg" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2016/03/15/抽奖镜像的优化和使用/" data-id="cilsvhr090003kguo5fhflgmg" class="article-share-link">Share</a>
       
       
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JavaScript/">JavaScript</a></li></ul>
+
     </footer>
   </div>
   
     
 <nav id="article-nav">
   
-    <a href="/2016/03/15/通过github和hexo布局博客/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2016/03/15/使用github工具直接在蜂巢上部署2048/" id="article-nav-newer" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Newer</strong>
       <div class="article-nav-title">
         
-          通过github和hexo布局博客 
+          使用github工具直接在蜂巢上部署2048 
         
       </div>
     </a>
   
+  
+    <a href="/2016/03/15/new/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">通过github和hexo布局博客</div>
+    </a>
   
 </nav>
 

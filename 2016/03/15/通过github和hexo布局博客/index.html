@@ -3,39 +3,39 @@
 <head>
   <meta charset="utf-8">
   
-  <title>Universe Dream</title>
+  <title>通过github和hexo布局博客  | Universe Dream</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="通过github和hexo布局博客简介此文档主要演示如何通过github和hexo进行博客的部署。
+  <meta name="description" content="简介此文档主要演示如何通过github和hexo进行博客的部署。
 准备条件本地安装好github工具和nodejs工具，，可以点击官网直接下载安装。准备一个github账号，并建立一个命名为 username.github.io 的仓库
 打开命令行，安装hexo
 npm install -g hexo
 
 npm install hexo-server
 
-npm i">
+npm install hexo-deplo">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Universe Dream">
-<meta property="og:url" content="http://yoursite.com/2016/03/14/new/index.html">
+<meta property="og:title" content="通过github和hexo布局博客 ">
+<meta property="og:url" content="http://yoursite.com/2016/03/15/通过github和hexo布局博客/index.html">
 <meta property="og:site_name" content="Universe Dream">
-<meta property="og:description" content="通过github和hexo布局博客简介此文档主要演示如何通过github和hexo进行博客的部署。
+<meta property="og:description" content="简介此文档主要演示如何通过github和hexo进行博客的部署。
 准备条件本地安装好github工具和nodejs工具，，可以点击官网直接下载安装。准备一个github账号，并建立一个命名为 username.github.io 的仓库
 打开命令行，安装hexo
 npm install -g hexo
 
 npm install hexo-server
 
-npm i">
-<meta property="og:updated_time" content="2016-03-14T10:07:43.194Z">
+npm install hexo-deplo">
+<meta property="og:updated_time" content="2016-03-15T03:41:50.228Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Universe Dream">
-<meta name="twitter:description" content="通过github和hexo布局博客简介此文档主要演示如何通过github和hexo进行博客的部署。
+<meta name="twitter:title" content="通过github和hexo布局博客 ">
+<meta name="twitter:description" content="简介此文档主要演示如何通过github和hexo进行博客的部署。
 准备条件本地安装好github工具和nodejs工具，，可以点击官网直接下载安装。准备一个github账号，并建立一个命名为 username.github.io 的仓库
 打开命令行，安装hexo
 npm install -g hexo
 
 npm install hexo-server
 
-npm i">
+npm install hexo-deplo">
   
     <link rel="alternate" href="/atom.xml" title="Universe Dream" type="application/atom+xml">
   
@@ -84,19 +84,29 @@ npm i">
   </div>
 </header>
       <div class="outer">
-        <section id="main"><article id="post-new" class="article article-type-post" itemscope itemprop="blogPost">
+        <section id="main"><article id="post-通过github和hexo布局博客" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/2016/03/14/new/" class="article-date">
-  <time datetime="2016-03-14T08:34:17.529Z" itemprop="datePublished">2016-03-14</time>
+    <a href="/2016/03/15/通过github和hexo布局博客/" class="article-date">
+  <time datetime="2016-03-15T01:38:42.000Z" itemprop="datePublished">2016-03-15</time>
 </a>
     
   </div>
   <div class="article-inner">
     
     
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      通过github和hexo布局博客 
+    </h1>
+  
+
+      </header>
+    
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="通过github和hexo布局博客"><a href="#通过github和hexo布局博客" class="headerlink" title="通过github和hexo布局博客"></a>通过github和hexo布局博客</h1><h2 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h2><p>此文档主要演示如何通过github和hexo进行博客的部署。</p>
+        <h2 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h2><p>此文档主要演示如何通过github和hexo进行博客的部署。</p>
 <h2 id="准备条件"><a href="#准备条件" class="headerlink" title="准备条件"></a>准备条件</h2><p>本地安装好github工具和nodejs工具，，可以点击官网直接下载安装。<br>准备一个github账号，并建立一个命名为 username.github.io 的仓库</p>
 <p>打开命令行，安装hexo</p>
 <pre><code>npm install -g hexo
@@ -115,12 +125,13 @@ hexo g
 hexo s
 </code></pre><p>更改 _config.yml </p>
 <p>光标定位到最后三行，对以下配置进行更改</p>
-<p>deploy:</p>
-<pre><code>type: git
+<pre><code>deploy:
 
-repository: http://github.com/username/username.github.io.git
+ type: git
 
-branch: master&apos;
+ repository: http://github.com/username/username.github.io.git
+
+ branch: master&apos;
 </code></pre><p>ps:冒号后面需要空格，否则会无法读取，</p>
 <pre><code>hexo deploy
 </code></pre><h2 id="SSH密钥设置"><a href="#SSH密钥设置" class="headerlink" title="SSH密钥设置"></a>SSH密钥设置</h2><p>首先我们需要检查你电脑上现有的ssh key：</p>
@@ -131,14 +142,25 @@ branch: master&apos;
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2016/03/14/new/" data-id="cilrw8phd000104uosxpyikjb" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2016/03/15/通过github和hexo布局博客/" data-id="cilsvhr0h0005kguofy3in5uj" class="article-share-link">Share</a>
       
       
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Github/">Github</a></li></ul>
+
     </footer>
   </div>
   
     
 <nav id="article-nav">
+  
+    <a href="/2016/03/15/new/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          通过github和hexo布局博客
+        
+      </div>
+    </a>
   
   
     <a href="/2016/03/14/hello-world/" id="article-nav-older" class="article-nav-link-wrap">
@@ -159,9 +181,23 @@ branch: master&apos;
 
   
     
+  <div class="widget-wrap">
+    <h3 class="widget-title">标签</h3>
+    <div class="widget">
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Github/">Github</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/JavaScript/">JavaScript</a></li></ul>
+    </div>
+  </div>
+
 
   
     
+  <div class="widget-wrap">
+    <h3 class="widget-title">标签云</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/Github/" style="font-size: 20px;">Github</a> <a href="/tags/JavaScript/" style="font-size: 10px;">JavaScript</a>
+    </div>
+  </div>
+
   
     
   <div class="widget-wrap">
@@ -180,7 +216,19 @@ branch: master&apos;
       <ul>
         
           <li>
-            <a href="/2016/03/14/new/">(no title)</a>
+            <a href="/2016/03/15/使用github工具直接在蜂巢上部署2048/">使用github工具直接在蜂巢上部署2048 </a>
+          </li>
+        
+          <li>
+            <a href="/2016/03/15/抽奖镜像的优化和使用/">抽奖镜像的优化和使用 </a>
+          </li>
+        
+          <li>
+            <a href="/2016/03/15/new/">通过github和hexo布局博客</a>
+          </li>
+        
+          <li>
+            <a href="/2016/03/15/通过github和hexo布局博客/">通过github和hexo布局博客 </a>
           </li>
         
           <li>

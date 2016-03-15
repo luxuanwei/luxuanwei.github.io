@@ -3,21 +3,36 @@
 <head>
   <meta charset="utf-8">
   
-  <title>Hello World | Universe Dream</title>
+  <title>使用github工具直接在蜂巢上部署2048  | Universe Dream</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub.
-Quick">
+  <meta name="description" content="简介此文档主要演示以2048小游戏为例，如何使用github工具直接在蜂巢上部署各种网页。
+准备条件1.本地创建Dockerfile和网页文档（war格式），这里给出tomcat的dockerfile
+FROM ubuntu:latest
+
+ENV REFRESHED_AT 2015-7-28
+RUN apt-get -yqq update
+RUN apt-get -yqq install tom">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Hello World">
-<meta property="og:url" content="http://yoursite.com/2016/03/14/hello-world/index.html">
+<meta property="og:title" content="使用github工具直接在蜂巢上部署2048 ">
+<meta property="og:url" content="http://yoursite.com/2016/03/15/使用github工具直接在蜂巢上部署2048/index.html">
 <meta property="og:site_name" content="Universe Dream">
-<meta property="og:description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub.
-Quick">
-<meta property="og:updated_time" content="2016-03-14T07:13:33.317Z">
+<meta property="og:description" content="简介此文档主要演示以2048小游戏为例，如何使用github工具直接在蜂巢上部署各种网页。
+准备条件1.本地创建Dockerfile和网页文档（war格式），这里给出tomcat的dockerfile
+FROM ubuntu:latest
+
+ENV REFRESHED_AT 2015-7-28
+RUN apt-get -yqq update
+RUN apt-get -yqq install tom">
+<meta property="og:updated_time" content="2016-03-15T03:41:51.934Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Hello World">
-<meta name="twitter:description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub.
-Quick">
+<meta name="twitter:title" content="使用github工具直接在蜂巢上部署2048 ">
+<meta name="twitter:description" content="简介此文档主要演示以2048小游戏为例，如何使用github工具直接在蜂巢上部署各种网页。
+准备条件1.本地创建Dockerfile和网页文档（war格式），这里给出tomcat的dockerfile
+FROM ubuntu:latest
+
+ENV REFRESHED_AT 2015-7-28
+RUN apt-get -yqq update
+RUN apt-get -yqq install tom">
   
     <link rel="alternate" href="/atom.xml" title="Universe Dream" type="application/atom+xml">
   
@@ -66,10 +81,10 @@ Quick">
   </div>
 </header>
       <div class="outer">
-        <section id="main"><article id="post-hello-world" class="article article-type-post" itemscope itemprop="blogPost">
+        <section id="main"><article id="post-使用github工具直接在蜂巢上部署2048" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/2016/03/14/hello-world/" class="article-date">
-  <time datetime="2016-03-14T07:13:33.314Z" itemprop="datePublished">2016-03-14</time>
+    <a href="/2016/03/15/使用github工具直接在蜂巢上部署2048/" class="article-date">
+  <time datetime="2016-03-15T03:38:42.000Z" itemprop="datePublished">2016-03-15</time>
 </a>
     
   </div>
@@ -80,7 +95,7 @@ Quick">
         
   
     <h1 class="article-title" itemprop="name">
-      Hello World
+      使用github工具直接在蜂巢上部署2048 
     </h1>
   
 
@@ -88,37 +103,56 @@ Quick">
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="external">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>
+        <h2 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h2><p>此文档主要演示以2048小游戏为例，如何使用github工具直接在蜂巢上部署各种网页。</p>
+<h2 id="准备条件"><a href="#准备条件" class="headerlink" title="准备条件"></a>准备条件</h2><p>1.本地创建Dockerfile和网页文档（war格式），这里给出tomcat的dockerfile</p>
+<pre><code>FROM ubuntu:latest
+
+ENV REFRESHED_AT 2015-7-28
+RUN apt-get -yqq update
+RUN apt-get -yqq install tomcat7 default-jdk
+
+ENV CATALINA_HOME /usr/share/tomcat7
+ENV CATALINA_BASE /var/lib/tomcat7
+ENV CATALINA_PID  /var/run/tomcat7.pid
+ENV CATALINA_SH   /usr/share/tomcat7/bin/catalina.sh
+ENV CATALINA_TMPDIR /tmp/tomcat7-tomcat7-tmp
+COPY ./ /var/lib/tomcat7/webapps
+
+RUN mkdir -p $CATALINA_TMPDIR
+VOLUME [&quot;/var/lib/tomcat7/webapps/&quot;]
+EXPOSE 8080 9000
+ENTRYPOINT [&quot;/usr/share/tomcat7/bin/catalina.sh&quot;, &quot;run&quot; ]
+</code></pre><p>2.将相应代码上传至github</p>
+<h2 id="快速上手"><a href="#快速上手" class="headerlink" title="快速上手"></a>快速上手</h2><p> 点击“创建服务”按钮，进入服务创建界面。</p>
+<p> 选择任意一个官方镜像（不需要是php），在Git地址处输入对应的github地址</p>
+<p>这里提供一个github地址</p>
+<p><a href="https://github.com/luxuanwei/2048.git" target="_blank" rel="external">https://github.com/luxuanwei/2048.git</a></p>
+<p>在Dockerfile处选择自定义，输入Dockerfile文件的源码中的路径。</p>
+<p>注：请将目的端口更改为8080</p>
+<h2 id="结果"><a href="#结果" class="headerlink" title="结果"></a>结果</h2><p>经过短暂的日志进度提示，容器很快创建成功，就可以直接看到容器挂载的外网IP</p>
+<p>现在直接在浏览器上打开界面上的地址，就可以快速访问刚成功创建的容器启动的服务</p>
+<p>  <a href="http://公网ip/2048" target="_blank" rel="external">http://公网ip/2048</a></p>
+<p>  通过这样的方法，我们的dockerfile就可以在不通过本地运行上传的方式直接在蜂巢上面运行了。</p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2016/03/14/hello-world/" data-id="cilsvhqzv0000kguoacd1e2lg" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2016/03/15/使用github工具直接在蜂巢上部署2048/" data-id="cilsvhr060002kguo4gir9sfs" class="article-share-link">Share</a>
       
       
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Github/">Github</a></li></ul>
+
     </footer>
   </div>
   
     
 <nav id="article-nav">
   
-    <a href="/2016/03/15/通过github和hexo布局博客/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Newer</strong>
-      <div class="article-nav-title">
-        
-          通过github和hexo布局博客 
-        
-      </div>
-    </a>
   
+    <a href="/2016/03/15/抽奖镜像的优化和使用/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">抽奖镜像的优化和使用 </div>
+    </a>
   
 </nav>
 
