@@ -249,40 +249,20 @@
       
         
           
-            <hr>
-<h3 id="FROM"><a href="#FROM" class="headerlink" title="FROM"></a>FROM</h3><p>用于拉取基础镜像</p>
-<pre><code>FROM &lt;image&gt; 或 FROM &lt;image&gt;:&lt;tag&gt;
-</code></pre><h3 id="MAINTAINER"><a href="#MAINTAINER" class="headerlink" title="MAINTAINER"></a>MAINTAINER</h3><p>指定维护者信息</p>
-<pre><code>MAINTAINER &lt;name&gt;
-</code></pre><h3 id="RUN"><a href="#RUN" class="headerlink" title="RUN"></a>RUN</h3><p>在当前镜像基础上执行命令，”\”用于换行</p>
-<pre><code>RUN &lt;shell command&gt;
-RUN [&quot;executable&quot;,&quot;param1&quot;,&quot;param2&quot;]
-</code></pre><h3 id="CMD"><a href="#CMD" class="headerlink" title="CMD"></a>CMD</h3><p>指定启动容器时执行的命令</p>
-<p>如果在容器中指定了多条指令，只执行最后一条</p>
-<pre><code>CMD [&quot;executable&quot;,&quot;param1&quot;,&quot;param2&quot;] 使用exec执行
-CMD [command param1 param2 ] 在/bin/sh 中执行
-CMD [&quot;param1&quot;,&quot;param2&quot;] 
-</code></pre><h3 id="EXPOSE"><a href="#EXPOSE" class="headerlink" title="EXPOSE"></a>EXPOSE</h3><p>告诉Docker服务端暴露的端口号</p>
-<p>在启动时指定容器主机，并自动分配一个端口</p>
-<p>转发到指定的端口</p>
-<h3 id="ENV"><a href="#ENV" class="headerlink" title="ENV"></a>ENV</h3><p>指定一个环境变量，会被后续RUN指令使用，并在容器运行时保持</p>
-<pre><code>ENV PATH /usr/local/postgres-$PG_MAJOR/bin:$PATH
-</code></pre><h3 id="ADD"><a href="#ADD" class="headerlink" title="ADD"></a>ADD</h3><p>复制指定的&lt; src &gt;到容器中的&lt; dest &gt;</p>
-<p>&lt; src &gt;可以是Dockerfile所在目录的一个路径，也可以是一个URL或tar文件</p>
-<h3 id="COPY"><a href="#COPY" class="headerlink" title="COPY"></a>COPY</h3><p>复制本地主机的&lt; src &gt;到容器中的&lt; dest &gt;</p>
-<h3 id="ENTRYPOINT"><a href="#ENTRYPOINT" class="headerlink" title="ENTRYPOINT"></a>ENTRYPOINT</h3><p>配置容器启动后执行的命令，并且不可被docker run提供的参数覆盖</p>
-<p>每个Dockerfile只能有一个 ENTRYPOINT</p>
-<pre><code>ENTRYPOINT [&quot;executable&quot;,&quot;param1&quot;,&quot;param2&quot;]
-ENTRYPOINT command param1 param2
-</code></pre><h3 id="VOLUME"><a href="#VOLUME" class="headerlink" title="VOLUME"></a>VOLUME</h3><p>创建一个可以从本地主机护着其他容器挂载的挂载点，一般用来存放数据库</p>
-<pre><code>VOLUME [&quot;/data&quot;]
-</code></pre><h3 id="USER"><a href="#USER" class="headerlink" title="USER"></a>USER</h3><p>指定运行容器时的用户名或UID，后续的RUN也会使用指定用户</p>
-<pre><code>USER daemon
-</code></pre><h3 id="WORKDIR"><a href="#WORKDIR" class="headerlink" title="WORKDIR"></a>WORKDIR</h3><p>为后续的RUN,CMD,ENTRYPOINT指令配置工作目录</p>
-<h3 id="ONBUILD"><a href="#ONBUILD" class="headerlink" title="ONBUILD"></a>ONBUILD</h3><p>配置当前创建镜像作为其他新镜像的基础镜像</p>
-<pre><code>ONBUILD [INSTRUCTION]
-</code></pre>
           
+FROM用于拉取基础镜像
+FROM &lt;image&gt; 或 FROM &lt;image&gt;:&lt;tag&gt;
+MAINTAINER指定维护者信息
+MAINTAINER &lt;name&gt;
+RUN在当前镜像基础上执行命令，”\”用于换行
+RUN &lt;shell comm
+          ...
+
+          <div class="post-more-link text-center">
+            <a class="btn" href="/2016/03/16/Dockerfile入门代码/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
         
       
     </div>
@@ -369,18 +349,24 @@ ENTRYPOINT command param1 param2
       
         
           
-            <hr>
-<h3 id="标题"><a href="#标题" class="headerlink" title="标题"></a>标题</h3><pre><code># 一级标题
+          
+标题# 一级标题
 ## 二级标题
 ### 三级标题
-</code></pre><h3 id="列表"><a href="#列表" class="headerlink" title="列表"></a>列表</h3><pre><code>* 无序列表
+列表* 无序列表
 1， 有序列表
-</code></pre><h3 id="引用"><a href="#引用" class="headerlink" title="引用"></a>引用</h3><pre><code>**Text**
+引用**Text**
 *Text*
-</code></pre><h3 id="分割线"><a href="#分割线" class="headerlink" title="分割线"></a>分割线</h3><pre><code>***
-</code></pre><hr>
+分割线***
+
 
           
+
+          <div class="post-more-link text-center">
+            <a class="btn" href="/2016/03/16/Markdown入门代码/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
         
       
     </div>
@@ -467,22 +453,20 @@ ENTRYPOINT command param1 param2
       
         
           
-            <hr>
-<h3 id="ubuntu常用命令"><a href="#ubuntu常用命令" class="headerlink" title="ubuntu常用命令"></a>ubuntu常用命令</h3><pre><code>apt-get update  更新系统
+          
+ubuntu常用命令apt-get update  更新系统
 apt-get upgrade 升级已安装所有软件包
 apt-get install -y nano 安装nano编辑器
 cd ..           进入上一层
 wget [url]      下载地址
-tar xzf         解压
-./configure     源代码安装
-make [option: target_name]  编译安装
-touch           新建文件
-mkdir           新建文件夹
-vi/nano         编辑文件
-</code></pre><h3 id="centos常用命令"><a href="#centos常用命令" class="headerlink" title="centos常用命令"></a>centos常用命令</h3><pre><code>yum install update 更新系统
-yum 
-</code></pre>
-          
+tar xzf       
+          ...
+
+          <div class="post-more-link text-center">
+            <a class="btn" href="/2016/03/15/Linux常用命令/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
         
       
     </div>
@@ -569,28 +553,17 @@ yum
       
         
           
-            <hr>
-<h2 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h2><p>Node.js是一个基于Chrome JavaScript运行时建立的平台， 用于方便地搭建响应速度快、易于扩展的网络应用。</p>
-<p>Node.js 使用事件驱动， 非阻塞I/O 模型而得以轻量和高效，非常适合在分布式设备上运行的数据密集型的实时应用。</p>
-<h2 id="nodejs-常用命令"><a href="#nodejs-常用命令" class="headerlink" title="nodejs 常用命令"></a>nodejs 常用命令</h2><pre><code>console.log(&quot;Hello World&quot;);    输出
-</code></pre><h2 id="搭建gitbook"><a href="#搭建gitbook" class="headerlink" title="搭建gitbook"></a>搭建gitbook</h2><p>准备：安装 node.js</p>
-<p>第一步：安装gitbook</p>
-<pre><code>npm install gitbook -gitbook
-</code></pre><p>第二步：准备两个基本文件</p>
-<ul>
-<li><p>README.md</p>
-</li>
-<li><p>SUMMARY.md</p>
-</li>
-</ul>
-<p>第三步：本地运行</p>
-<pre><code>gitbook serve -p 8080
-</code></pre><h2 id="搭建hexo-博客"><a href="#搭建hexo-博客" class="headerlink" title="搭建hexo 博客"></a>搭建hexo 博客</h2><p>具体见 “通过github和hexo布局博客”</p>
-<pre><code>npm install -g hexo
-npm install hexo-server
-npm install hexo-deployer-git --save
-</code></pre>
           
+简介Node.js是一个基于Chrome JavaScript运行时建立的平台， 用于方便地搭建响应速度快、易于扩展的网络应用。
+Node.js 使用事件驱动， 非阻塞I/O 模型而得以轻量和高效，非常适合在分布式设备上运行的数据密集型的实时应用。
+nodejs 常用命令console.log(&
+          ...
+
+          <div class="post-more-link text-center">
+            <a class="btn" href="/2016/03/15/nodejs入门及应用/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
         
       
     </div>
@@ -677,33 +650,19 @@ npm install hexo-deployer-git --save
       
         
           
-            <hr>
-<h2 id="创建容器"><a href="#创建容器" class="headerlink" title="创建容器"></a>创建容器</h2><p>在蜂巢选择ubuntu容器</p>
-<h2 id="配置环境"><a href="#配置环境" class="headerlink" title="配置环境"></a>配置环境</h2><p>在ubuntu系统上安装g++，libz开发包，libpcre开发包，libiconv开发包，make工具</p>
-<pre><code>apt-get update
-apt-get install make
-apt-get install gcc build-essential -y
-apt-get install libpcre3 libpcre3-dev
-apt-get install openssl 
-apt-get install libssl-dev
-apt-get install sqlite
-apt-get install lib32stdc++6
-</code></pre><p>下载源代码</p>
-<pre><code>wget http://download.kanglesoft.com/src/kangle-3.4.2.tar.gz
-</code></pre><p>解压</p>
-<pre><code>tar xzf kangle-3.4.2.tar.gz &amp;&amp; cd kangle-3.4.2    
-</code></pre><p>配置kangle源代码</p>
-<pre><code>./configure --prefix=/usr/local/kangle
-</code></pre><p>安装</p>
-<p>编译安装</p>
-<pre><code>make &amp;&amp; make install
-</code></pre><p>启动kangle</p>
-<pre><code>./src/kangle
-</code></pre><p>进入kangle管理</p>
-<pre><code>http://外网ip地址:3311/
-</code></pre><p>第一次进入输入 用户名admin,密码kangle</p>
-
           
+创建容器在蜂巢选择ubuntu容器
+配置环境在ubuntu系统上安装g++，libz开发包，libpcre开发包，libiconv开发包，make工具
+apt-get update
+apt-get install make
+apt-get install gcc build-essential -
+          ...
+
+          <div class="post-more-link text-center">
+            <a class="btn" href="/2016/03/15/在蜂巢部署kangle服务器/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
         
       
     </div>
@@ -790,34 +749,19 @@ apt-get install lib32stdc++6
       
         
           
-            <hr>
-<h2 id="Docker-Linux安装篇"><a href="#Docker-Linux安装篇" class="headerlink" title="Docker Linux安装篇"></a>Docker Linux安装篇</h2><pre><code>sudo apt-get uodate
+          
+Docker Linux安装篇sudo apt-get uodate
 sudo apt-repostry ppa:docker-maint/testing
 sudo apt-get install docker.io
-</code></pre><h2 id="Docker-基本概念"><a href="#Docker-基本概念" class="headerlink" title="Docker 基本概念"></a>Docker 基本概念</h2><pre><code>Docker Daemon 运行在一个主机上
-Docker Client 访问在Docker的渠道
-Docker Images 一个只读模板
-Docker Registry 存放Images的仓库
-Docker Containers 文件夹/实例
-</code></pre><h2 id="Docker-常用命令"><a href="#Docker-常用命令" class="headerlink" title="Docker 常用命令"></a>Docker 常用命令</h2><pre><code>docker version      查看容器版本
-docker build -t     根据dockerfile创建镜像
-docker images       查看本机镜像
-docker history      查看镜像创建各种版本
-docker run -d       创建镜像的容器
-docker ps           查看正在运行的容器
-docker pull         拉取镜像
-docker push         上传镜像
-docker rmi $(docker images -q)   删除本机镜像 
-docker stop $(docker ps -a -q)   停止本机容器
-</code></pre><h2 id="蜂巢使用命令"><a href="#蜂巢使用命令" class="headerlink" title="蜂巢使用命令"></a>蜂巢使用命令</h2><p>1.登陆蜂巢</p>
-<pre><code>docker login -u 13962751479 -p jsntlxw1 -e 13962751479 hub.c.163.com
-</code></pre><p>2.推送镜像</p>
-<pre><code>docker tag [image-name] hub.c.163.com/luxuanwei/
-docker pull hub.163.com/luxuanwei/
-</code></pre><p>3.镜像加速</p>
-<pre><code>DOKCER_OPTS=&quot;--registry-mirror http://hub-mirror.c.163.com&quot;
-</code></pre>
-          
+Docker 基本概念Docker Daemon 运行在一个主机上
+Docker
+          ...
+
+          <div class="post-more-link text-center">
+            <a class="btn" href="/2016/03/15/Docker常用命令/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
         
       
     </div>
@@ -904,39 +848,20 @@ docker pull hub.163.com/luxuanwei/
       
         
           
-            <hr>
-<h2 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h2><p>此文档主要演示以2048小游戏为例，如何使用github工具直接在蜂巢上部署各种网页。</p>
-<h2 id="准备条件"><a href="#准备条件" class="headerlink" title="准备条件"></a>准备条件</h2><p>1.本地创建Dockerfile和网页文档（war格式），这里给出tomcat的dockerfile</p>
-<pre><code>FROM ubuntu:latest
+          
+简介此文档主要演示以2048小游戏为例，如何使用github工具直接在蜂巢上部署各种网页。
+准备条件1.本地创建Dockerfile和网页文档（war格式），这里给出tomcat的dockerfile
+FROM ubuntu:latest
 
 ENV REFRESHED_AT 2015-7-28
-RUN apt-get -yqq update
-RUN apt-get -yqq install tomcat7 default-jdk
+R
+          ...
 
-ENV CATALINA_HOME /usr/share/tomcat7
-ENV CATALINA_BASE /var/lib/tomcat7
-ENV CATALINA_PID  /var/run/tomcat7.pid
-ENV CATALINA_SH   /usr/share/tomcat7/bin/catalina.sh
-ENV CATALINA_TMPDIR /tmp/tomcat7-tomcat7-tmp
-COPY ./ /var/lib/tomcat7/webapps
-
-RUN mkdir -p $CATALINA_TMPDIR
-VOLUME [&quot;/var/lib/tomcat7/webapps/&quot;]
-EXPOSE 8080 9000
-ENTRYPOINT [&quot;/usr/share/tomcat7/bin/catalina.sh&quot;, &quot;run&quot; ]
-</code></pre><p>2.将相应代码上传至github</p>
-<h2 id="快速上手"><a href="#快速上手" class="headerlink" title="快速上手"></a>快速上手</h2><p> 点击“创建服务”按钮，进入服务创建界面。</p>
-<p> 选择任意一个官方镜像（不需要是php），在Git地址处输入对应的github地址</p>
-<p>这里提供一个github地址</p>
-<p><a href="https://github.com/luxuanwei/2048.git" target="_blank" rel="external">https://github.com/luxuanwei/2048.git</a></p>
-<p>在Dockerfile处选择自定义，输入Dockerfile文件的源码中的路径。</p>
-<p>注：请将目的端口更改为8080</p>
-<h2 id="结果"><a href="#结果" class="headerlink" title="结果"></a>结果</h2><p>经过短暂的日志进度提示，容器很快创建成功，就可以直接看到容器挂载的外网IP</p>
-<p>现在直接在浏览器上打开界面上的地址，就可以快速访问刚成功创建的容器启动的服务</p>
-<p>  <a href="http://公网ip/2048" target="_blank" rel="external">http://公网ip/2048</a></p>
-<p>  通过这样的方法，我们的dockerfile就可以在不通过本地运行上传的方式直接在蜂巢上面运行了。</p>
-
-          
+          <div class="post-more-link text-center">
+            <a class="btn" href="/2016/03/15/使用github工具直接在蜂巢上部署2048/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
         
       
     </div>
@@ -1023,21 +948,20 @@ ENTRYPOINT [&quot;/usr/share/tomcat7/bin/catalina.sh&quot;, &quot;run&quot; ]
       
         
           
-            <hr>
-<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>在网易实习的这段时间学到了蛮多的，除了docker，接触了挺多前沿的知识。</p>
-<p>其中有一个工作是在蜂巢上面部署一个抽奖网页，然后将其写入dockerfile文档。</p>
-<p>在实现的过程中，意外的重拾了一些JS方面的知识，下面是一些整理。</p>
-<p>JS中常用的弹窗</p>
-<pre><code>alert()
-</code></pre><p>变量初始化(可以初始化任何类型的值)</p>
-<pre><code>var time =[0,1];
-var i = 0;
-</code></pre><p>选取随机数</p>
-<pre><code>var time = [0,1]; //定义一个一维数组，里面包含0，1
-time = time[Math.floor(Math.random()*time.length)];  
-//取一个小数，接近1时取1，接近0时取0
-</code></pre>
           
+前言在网易实习的这段时间学到了蛮多的，除了docker，接触了挺多前沿的知识。
+其中有一个工作是在蜂巢上面部署一个抽奖网页，然后将其写入dockerfile文档。
+在实现的过程中，意外的重拾了一些JS方面的知识，下面是一些整理。
+JS中常用的弹窗
+alert()
+变量初始化(可以初始化任何类型的值
+          ...
+
+          <div class="post-more-link text-center">
+            <a class="btn" href="/2016/03/15/抽奖镜像的优化和使用/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
         
       
     </div>
@@ -1124,37 +1048,18 @@ time = time[Math.floor(Math.random()*time.length)];
       
         
           
-            <hr>
-<h2 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h2><p>此文档主要演示如何通过github和hexo进行博客的部署。</p>
-<h2 id="准备条件"><a href="#准备条件" class="headerlink" title="准备条件"></a>准备条件</h2><p>本地安装好github工具和nodejs工具，，可以点击官网直接下载安装。<br>准备一个github账号，并建立一个命名为 username.github.io 的仓库</p>
-<p>打开命令行，安装hexo</p>
-<pre><code>npm install -g hexo
-npm install hexo-server
-npm install hexo-deployer-git --save
-</code></pre><h2 id="快速上手"><a href="#快速上手" class="headerlink" title="快速上手"></a>快速上手</h2><p>在D盘建立hexo文件夹，用git bash打开</p>
-<p>输入命令</p>
-<pre><code>hexo init 
-hexo new “first passage”
-hexo g
-hexo s
-</code></pre><p>更改 _config.yml </p>
-<p>光标定位到最后三行，对以下配置进行更改</p>
-<pre><code>deploy：
- type: git
- repository: http://github.com/username/username.github.io.git
- branch: master&apos;
-</code></pre><p>ps:冒号后面需要空格，否则会无法读取，</p>
-<pre><code>hexo deploy
-</code></pre><p>更新博客代码</p>
-<pre><code>hexo clean
-hexo g
-hexo s
-</code></pre><h2 id="SSH密钥设置"><a href="#SSH密钥设置" class="headerlink" title="SSH密钥设置"></a>SSH密钥设置</h2><p>首先我们需要检查你电脑上现有的ssh key：</p>
-<p>‘ $ cd ~/. ssh 检查本机的ssh密钥 ‘</p>
-<p>生成新的SSH Key：</p>
-<p>‘$ ssh-keygen -t rsa -C 邮件地址@youremail.com’</p>
-
           
+简介此文档主要演示如何通过github和hexo进行博客的部署。
+准备条件本地安装好github工具和nodejs工具，，可以点击官网直接下载安装。准备一个github账号，并建立一个命名为 username.github.io 的仓库
+打开命令行，安装hexo
+npm install -g he
+          ...
+
+          <div class="post-more-link text-center">
+            <a class="btn" href="/2016/03/15/通过github和hexo布局博客/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
         
       
     </div>

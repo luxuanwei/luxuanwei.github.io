@@ -75,7 +75,7 @@ Docker 基本概念Docker Daemon 运行在一个主机上
 Docker Client 访问在Docker的渠道
 Docker Images 一个只读模板
 Docker R">
-<meta property="og:updated_time" content="2016-03-16T09:50:21.040Z">
+<meta property="og:updated_time" content="2016-03-16T12:10:47.364Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content=" Docker常用命令 ">
 <meta name="twitter:description" content="Docker Linux安装篇sudo apt-get uodate
@@ -281,13 +281,14 @@ docker push         上传镜像
 docker rmi $(docker images -q)   删除本机镜像 
 docker stop $(docker ps -a -q)   停止本机容器
 </code></pre><h2 id="蜂巢使用命令"><a href="#蜂巢使用命令" class="headerlink" title="蜂巢使用命令"></a>蜂巢使用命令</h2><p>1.登陆蜂巢</p>
-<pre><code>docker login -u 13962751479 -p jsntlxw1 -e 13962751479 hub.c.163.com
+<pre><code>docker login -u *** -p *** -e *** hub.c.163.com
 </code></pre><p>2.推送镜像</p>
 <pre><code>docker tag [image-name] hub.c.163.com/luxuanwei/
 docker pull hub.163.com/luxuanwei/
 </code></pre><p>3.镜像加速</p>
 <pre><code>DOKCER_OPTS=&quot;--registry-mirror http://hub-mirror.c.163.com&quot;
-</code></pre>
+</code></pre><hr>
+
       
     </div>
 
