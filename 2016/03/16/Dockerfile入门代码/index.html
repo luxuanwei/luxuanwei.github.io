@@ -3,36 +3,36 @@
 <head>
   <meta charset="utf-8">
   
-  <title>在蜂巢部署kangle服务器  | Universe Dream</title>
+  <title>Dockerfile入门代码  | Universe Dream</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="创建容器在蜂巢选择ubuntu容器
-配置环境在ubuntu系统上安装g++，libz开发包，libpcre开发包，libiconv开发包，make工具
-apt-get update
-apt-get install make
-apt-get install gcc build-essential -y
-apt-get install libpcre3 libpcre3-dev
-apt-get ins">
+  <meta name="description" content="FROM用于拉取基础镜像
+FROM &amp;lt;image&amp;gt; 或 FROM &amp;lt;image&amp;gt;:&amp;lt;tag&amp;gt;
+MAINTAINER指定维护者信息
+MAINTAINER &amp;lt;name&amp;gt;
+RUN在当前镜像基础上执行命令，”\”用于换行
+RUN &amp;lt;shell command&amp;gt;
+RUN [&amp;quot;executable&amp;quot;,&amp;quot;param1&amp;qu">
 <meta property="og:type" content="article">
-<meta property="og:title" content="在蜂巢部署kangle服务器 ">
-<meta property="og:url" content="http://yoursite.com/2016/03/15/在蜂巢部署kangle服务器/index.html">
+<meta property="og:title" content="Dockerfile入门代码 ">
+<meta property="og:url" content="http://yoursite.com/2016/03/16/Dockerfile入门代码/index.html">
 <meta property="og:site_name" content="Universe Dream">
-<meta property="og:description" content="创建容器在蜂巢选择ubuntu容器
-配置环境在ubuntu系统上安装g++，libz开发包，libpcre开发包，libiconv开发包，make工具
-apt-get update
-apt-get install make
-apt-get install gcc build-essential -y
-apt-get install libpcre3 libpcre3-dev
-apt-get ins">
-<meta property="og:updated_time" content="2016-03-15T09:31:03.792Z">
+<meta property="og:description" content="FROM用于拉取基础镜像
+FROM &amp;lt;image&amp;gt; 或 FROM &amp;lt;image&amp;gt;:&amp;lt;tag&amp;gt;
+MAINTAINER指定维护者信息
+MAINTAINER &amp;lt;name&amp;gt;
+RUN在当前镜像基础上执行命令，”\”用于换行
+RUN &amp;lt;shell command&amp;gt;
+RUN [&amp;quot;executable&amp;quot;,&amp;quot;param1&amp;qu">
+<meta property="og:updated_time" content="2016-03-16T07:59:05.048Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="在蜂巢部署kangle服务器 ">
-<meta name="twitter:description" content="创建容器在蜂巢选择ubuntu容器
-配置环境在ubuntu系统上安装g++，libz开发包，libpcre开发包，libiconv开发包，make工具
-apt-get update
-apt-get install make
-apt-get install gcc build-essential -y
-apt-get install libpcre3 libpcre3-dev
-apt-get ins">
+<meta name="twitter:title" content="Dockerfile入门代码 ">
+<meta name="twitter:description" content="FROM用于拉取基础镜像
+FROM &amp;lt;image&amp;gt; 或 FROM &amp;lt;image&amp;gt;:&amp;lt;tag&amp;gt;
+MAINTAINER指定维护者信息
+MAINTAINER &amp;lt;name&amp;gt;
+RUN在当前镜像基础上执行命令，”\”用于换行
+RUN &amp;lt;shell command&amp;gt;
+RUN [&amp;quot;executable&amp;quot;,&amp;quot;param1&amp;qu">
   
     <link rel="alternate" href="/atom.xml" title="Universe Dream" type="application/atom+xml">
   
@@ -81,10 +81,10 @@ apt-get ins">
   </div>
 </header>
       <div class="outer">
-        <section id="main"><article id="post-在蜂巢部署kangle服务器" class="article article-type-post" itemscope itemprop="blogPost">
+        <section id="main"><article id="post-Dockerfile入门代码" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/2016/03/15/在蜂巢部署kangle服务器/" class="article-date">
-  <time datetime="2016-03-15T08:38:42.000Z" itemprop="datePublished">2016-03-15</time>
+    <a href="/2016/03/16/Dockerfile入门代码/" class="article-date">
+  <time datetime="2016-03-16T02:33:42.000Z" itemprop="datePublished">2016-03-16</time>
 </a>
     
   </div>
@@ -95,7 +95,7 @@ apt-get ins">
         
   
     <h1 class="article-title" itemprop="name">
-      在蜂巢部署kangle服务器 
+      Dockerfile入门代码 
     </h1>
   
 
@@ -103,35 +103,42 @@ apt-get ins">
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="创建容器"><a href="#创建容器" class="headerlink" title="创建容器"></a>创建容器</h2><p>在蜂巢选择ubuntu容器</p>
-<h2 id="配置环境"><a href="#配置环境" class="headerlink" title="配置环境"></a>配置环境</h2><p>在ubuntu系统上安装g++，libz开发包，libpcre开发包，libiconv开发包，make工具</p>
-<pre><code>apt-get update
-apt-get install make
-apt-get install gcc build-essential -y
-apt-get install libpcre3 libpcre3-dev
-apt-get install openssl 
-apt-get install libssl-dev
-apt-get install sqlite
-apt-get install lib32stdc++6
-</code></pre><p>下载源代码</p>
-<pre><code>wget http://download.kanglesoft.com/src/kangle-3.4.2.tar.gz
-</code></pre><p>解压</p>
-<pre><code>tar xzf kangle-3.4.2.tar.gz &amp;&amp; cd kangle-3.4.2    
-</code></pre><p>配置kangle源代码</p>
-<pre><code>./configure --prefix=/usr/local/kangle
-</code></pre><p>安装</p>
-<p>编译安装</p>
-<pre><code>make &amp;&amp; make install
-</code></pre><p>启动kangle</p>
-<pre><code>./src/kangle
-</code></pre><p>进入kangle管理</p>
-<pre><code>http://外网ip地址:3311/
-</code></pre><p>第一次进入输入 用户名admin,密码kangle</p>
-
+        <h3 id="FROM"><a href="#FROM" class="headerlink" title="FROM"></a>FROM</h3><p>用于拉取基础镜像</p>
+<pre><code>FROM &lt;image&gt; 或 FROM &lt;image&gt;:&lt;tag&gt;
+</code></pre><h3 id="MAINTAINER"><a href="#MAINTAINER" class="headerlink" title="MAINTAINER"></a>MAINTAINER</h3><p>指定维护者信息</p>
+<pre><code>MAINTAINER &lt;name&gt;
+</code></pre><h3 id="RUN"><a href="#RUN" class="headerlink" title="RUN"></a>RUN</h3><p>在当前镜像基础上执行命令，”\”用于换行</p>
+<pre><code>RUN &lt;shell command&gt;
+RUN [&quot;executable&quot;,&quot;param1&quot;,&quot;param2&quot;]
+</code></pre><h3 id="CMD"><a href="#CMD" class="headerlink" title="CMD"></a>CMD</h3><p>指定启动容器时执行的命令</p>
+<p>如果在容器中指定了多条指令，只执行最后一条</p>
+<pre><code>CMD [&quot;executable&quot;,&quot;param1&quot;,&quot;param2&quot;] 使用exec执行
+CMD [command param1 param2 ] 在/bin/sh 中执行
+CMD [&quot;param1&quot;,&quot;param2&quot;] 
+</code></pre><h3 id="EXPOSE"><a href="#EXPOSE" class="headerlink" title="EXPOSE"></a>EXPOSE</h3><p>告诉Docker服务端暴露的端口号</p>
+<p>在启动时指定容器主机，并自动分配一个端口</p>
+<p>转发到指定的端口</p>
+<h3 id="ENV"><a href="#ENV" class="headerlink" title="ENV"></a>ENV</h3><p>指定一个环境变量，会被后续RUN指令使用，并在容器运行时保持</p>
+<pre><code>ENV PATH /usr/local/postgres-$PG_MAJOR/bin:$PATH
+</code></pre><h3 id="ADD"><a href="#ADD" class="headerlink" title="ADD"></a>ADD</h3><p>复制指定的&lt; src &gt;到容器中的&lt; dest &gt;</p>
+<p>&lt; src &gt;可以是Dockerfile所在目录的一个路径，也可以是一个URL或tar文件</p>
+<h3 id="COPY"><a href="#COPY" class="headerlink" title="COPY"></a>COPY</h3><p>复制本地主机的&lt; src &gt;到容器中的&lt; dest &gt;</p>
+<h3 id="ENTRYPOINT"><a href="#ENTRYPOINT" class="headerlink" title="ENTRYPOINT"></a>ENTRYPOINT</h3><p>配置容器启动后执行的命令，并且不可被docker run提供的参数覆盖</p>
+<p>每个Dockerfile只能有一个 ENTRYPOINT</p>
+<pre><code>ENTRYPOINT [&quot;executable&quot;,&quot;param1&quot;,&quot;param2&quot;]
+ENTRYPOINT command param1 param2
+</code></pre><h3 id="VOLUME"><a href="#VOLUME" class="headerlink" title="VOLUME"></a>VOLUME</h3><p>创建一个可以从本地主机护着其他容器挂载的挂载点，一般用来存放数据库</p>
+<pre><code>VOLUME [&quot;/data&quot;]
+</code></pre><h3 id="USER"><a href="#USER" class="headerlink" title="USER"></a>USER</h3><p>指定运行容器时的用户名或UID，后续的RUN也会使用指定用户</p>
+<pre><code>USER daemon
+</code></pre><h3 id="WORKDIR"><a href="#WORKDIR" class="headerlink" title="WORKDIR"></a>WORKDIR</h3><p>为后续的RUN,CMD,ENTRYPOINT指令配置工作目录</p>
+<h3 id="ONBUILD"><a href="#ONBUILD" class="headerlink" title="ONBUILD"></a>ONBUILD</h3><p>配置当前创建镜像作为其他新镜像的基础镜像</p>
+<pre><code>ONBUILD [INSTRUCTION]
+</code></pre>
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2016/03/15/在蜂巢部署kangle服务器/" data-id="ciluk4nz70004gcuoqkjoe8my" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2016/03/16/Dockerfile入门代码/" data-id="ciluk4nyr0000gcuocv4l0k72" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Docker/">Docker</a></li></ul>
@@ -142,19 +149,10 @@ apt-get install lib32stdc++6
     
 <nav id="article-nav">
   
-    <a href="/2016/03/15/nodejs入门及应用/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Newer</strong>
-      <div class="article-nav-title">
-        
-          nodejs常用案例分析 
-        
-      </div>
-    </a>
   
-  
-    <a href="/2016/03/15/Docker常用命令/" id="article-nav-older" class="article-nav-link-wrap">
+    <a href="/2016/03/16/Markdown入门代码/" id="article-nav-older" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Older</strong>
-      <div class="article-nav-title"> Docker常用命令 </div>
+      <div class="article-nav-title">MarkDown入门代码 </div>
     </a>
   
 </nav>
