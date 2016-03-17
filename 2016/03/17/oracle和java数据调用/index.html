@@ -41,7 +41,7 @@
 <link href="/css/main.css?v=0.5.0" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Docker," />
+  <meta name="keywords" content="Java," />
 
 
 
@@ -57,34 +57,34 @@
 
 
 
-<meta name="description" content="Docker Linux安装篇sudo apt-get uodate
-sudo apt-repostry ppa:docker-maint/testing
-sudo apt-get install docker.io
-Docker 基本概念Docker Daemon 运行在一个主机上
-Docker Client 访问在Docker的渠道
-Docker Images 一个只读模板
-Docker R">
+<meta name="description" content="oracle基本操作登陆操作第一步：输入sqlplus/nolog,进入用户不登录界面
+第二步: 输入conn/as sysdba，链接系统账户
+第三步：输入alter user scott account unlock，更改scoot账户为解锁状态
+第四步：输入conn scott/tiger 
+直接登陆    
+用户名:scott 密码:tiger
+导出oracle数据库文件exp syste">
 <meta property="og:type" content="article">
-<meta property="og:title" content=" Docker常用命令 ">
-<meta property="og:url" content="http://yoursite.com/2016/03/15/Docker常用命令/index.html">
+<meta property="og:title" content="oracle和java数据调用 ">
+<meta property="og:url" content="http://yoursite.com/2016/03/17/oracle和java数据调用/index.html">
 <meta property="og:site_name" content="Day Dreaming">
-<meta property="og:description" content="Docker Linux安装篇sudo apt-get uodate
-sudo apt-repostry ppa:docker-maint/testing
-sudo apt-get install docker.io
-Docker 基本概念Docker Daemon 运行在一个主机上
-Docker Client 访问在Docker的渠道
-Docker Images 一个只读模板
-Docker R">
-<meta property="og:updated_time" content="2016-03-16T12:10:47.364Z">
+<meta property="og:description" content="oracle基本操作登陆操作第一步：输入sqlplus/nolog,进入用户不登录界面
+第二步: 输入conn/as sysdba，链接系统账户
+第三步：输入alter user scott account unlock，更改scoot账户为解锁状态
+第四步：输入conn scott/tiger 
+直接登陆    
+用户名:scott 密码:tiger
+导出oracle数据库文件exp syste">
+<meta property="og:updated_time" content="2016-03-17T10:29:33.117Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content=" Docker常用命令 ">
-<meta name="twitter:description" content="Docker Linux安装篇sudo apt-get uodate
-sudo apt-repostry ppa:docker-maint/testing
-sudo apt-get install docker.io
-Docker 基本概念Docker Daemon 运行在一个主机上
-Docker Client 访问在Docker的渠道
-Docker Images 一个只读模板
-Docker R">
+<meta name="twitter:title" content="oracle和java数据调用 ">
+<meta name="twitter:description" content="oracle基本操作登陆操作第一步：输入sqlplus/nolog,进入用户不登录界面
+第二步: 输入conn/as sysdba，链接系统账户
+第三步：输入alter user scott account unlock，更改scoot账户为解锁状态
+第四步：输入conn scott/tiger 
+直接登陆    
+用户名:scott 密码:tiger
+导出oracle数据库文件exp syste">
 
 
 
@@ -102,7 +102,7 @@ Docker R">
   };
 </script>
 
-  <title>  Docker常用命令  | Day Dreaming </title>
+  <title> oracle和java数据调用  | Day Dreaming </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -222,7 +222,7 @@ Docker R">
             
             
               
-                 Docker常用命令 
+                oracle和java数据调用 
               
             
           </h1>
@@ -234,8 +234,8 @@ Docker R">
               <i class="fa fa-calendar-o"></i>
             </span>
             <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-03-15T14:38:42+08:00" content="2016-03-15">
-              2016-03-15
+            <time itemprop="dateCreated" datetime="2016-03-17T17:33:42+08:00" content="2016-03-17">
+              2016-03-17
             </time>
           </span>
 
@@ -261,33 +261,34 @@ Docker R">
       
 
       
-        <hr>
-<h2 id="Docker-Linux安装篇"><a href="#Docker-Linux安装篇" class="headerlink" title="Docker Linux安装篇"></a>Docker Linux安装篇</h2><pre><code>sudo apt-get uodate
-sudo apt-repostry ppa:docker-maint/testing
-sudo apt-get install docker.io
-</code></pre><h2 id="Docker-基本概念"><a href="#Docker-基本概念" class="headerlink" title="Docker 基本概念"></a>Docker 基本概念</h2><pre><code>Docker Daemon 运行在一个主机上
-Docker Client 访问在Docker的渠道
-Docker Images 一个只读模板
-Docker Registry 存放Images的仓库
-Docker Containers 文件夹/实例
-</code></pre><h2 id="Docker-常用命令"><a href="#Docker-常用命令" class="headerlink" title="Docker 常用命令"></a>Docker 常用命令</h2><pre><code>docker version      查看容器版本
-docker build -t     根据dockerfile创建镜像
-docker images       查看本机镜像
-docker history      查看镜像创建各种版本
-docker run -d       创建镜像的容器
-docker ps           查看正在运行的容器
-docker pull         拉取镜像
-docker push         上传镜像
-docker rmi $(docker images -q)   删除本机镜像 
-docker stop $(docker ps -a -q)   停止本机容器
-</code></pre><h2 id="蜂巢使用命令"><a href="#蜂巢使用命令" class="headerlink" title="蜂巢使用命令"></a>蜂巢使用命令</h2><p>1.登陆蜂巢</p>
-<pre><code>docker login -u *** -p *** -e *** hub.c.163.com
-</code></pre><p>2.推送镜像</p>
-<pre><code>docker tag [image-name] hub.c.163.com/luxuanwei/
-docker pull hub.163.com/luxuanwei/
-</code></pre><p>3.镜像加速</p>
-<pre><code>DOKCER_OPTS=&quot;--registry-mirror http://hub-mirror.c.163.com&quot;
-</code></pre><hr>
+        <h2 id="oracle基本操作"><a href="#oracle基本操作" class="headerlink" title="oracle基本操作"></a>oracle基本操作</h2><h3 id="登陆操作"><a href="#登陆操作" class="headerlink" title="登陆操作"></a>登陆操作</h3><p>第一步：输入sqlplus/nolog,进入用户不登录界面</p>
+<p>第二步: 输入conn/as sysdba，链接系统账户</p>
+<p>第三步：输入alter user scott account unlock，更改scoot账户为解锁状态</p>
+<p>第四步：输入conn scott/tiger </p>
+<p>直接登陆    </p>
+<p>用户名:scott<br> 密码:tiger</p>
+<h3 id="导出oracle数据库文件"><a href="#导出oracle数据库文件" class="headerlink" title="导出oracle数据库文件"></a>导出oracle数据库文件</h3><pre><code>exp system/manager@XUANSHU file=d:\supermarket.dmp owner=cm
+</code></pre><h2 id="oracle常用代码"><a href="#oracle常用代码" class="headerlink" title="oracle常用代码"></a>oracle常用代码</h2><h3 id="创建表空间"><a href="#创建表空间" class="headerlink" title="创建表空间"></a>创建表空间</h3><pre><code>Create tablespace 表格名称
+Datafile &apos;filename&apos; [ SIZE integer [ K/M ] ]   //数据库文件名和文件大小设置
+[ autoextend [ OFF/ON ]  //表空间用于自动扩展
+</code></pre><h3 id="创建用户"><a href="#创建用户" class="headerlink" title="创建用户"></a>创建用户</h3><pre><code>Create user&lt;用户名&gt;  identtified by &lt;口令&gt;
+Default tablespace &lt;表空间名&gt;
+Temporary  tablespace &lt;临时表空间名&gt;
+Quota &lt;空间大小&gt; on &lt;空间名称&gt;  
+</code></pre><h3 id="权限管理"><a href="#权限管理" class="headerlink" title="权限管理"></a>权限管理</h3><pre><code>Grant 权限/角色 to 用户名
+Revoke 权限/角色 from 用户名
+Grant connect,resource to 用户名  //常见权限授予
+</code></pre><h3 id="创建表"><a href="#创建表" class="headerlink" title="创建表"></a>创建表</h3><pre><code>Create table cm
+(
+    Name varchar2(6) not null,
+    Street varchar2(15),
+    City varchar(22),
+    Phone number(20)
+);
+</code></pre><h3 id="数据库操纵语言"><a href="#数据库操纵语言" class="headerlink" title="数据库操纵语言"></a>数据库操纵语言</h3><p>修改表中的某一列<br>    alter table tablename  rename column columnname to newcolumnname</p>
+<p>删除表中的某一列<br>    alter table supplier drop column supplier_context;</p>
+<p>添加表中的某一列<br>    alter table tablename add  newcolumnname varchar()/number()；</p>
+<p>查看表的所有列名<br>    Desc table_name;</p>
 
       
     </div>
@@ -302,7 +303,7 @@ docker pull hub.163.com/luxuanwei/
       
         <div class="post-tags">
           
-            <a href="/tags/Docker/" rel="tag">#Docker</a>
+            <a href="/tags/Java/" rel="tag">#Java</a>
           
         </div>
       
@@ -311,17 +312,13 @@ docker pull hub.163.com/luxuanwei/
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2016/03/15/使用github工具直接在蜂巢上部署2048/" rel="next" title="使用github工具直接在蜂巢上部署2048 ">
-                <i class="fa fa-chevron-left"></i> 使用github工具直接在蜂巢上部署2048 
+              <a href="/2016/03/16/Dockerfile入门代码/" rel="next" title="Dockerfile入门代码 ">
+                <i class="fa fa-chevron-left"></i> Dockerfile入门代码 
               </a>
             
           </div>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2016/03/15/在蜂巢部署kangle服务器/" rel="prev" title="在蜂巢部署kangle服务器 ">
-                在蜂巢部署kangle服务器  <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -433,7 +430,7 @@ docker pull hub.163.com/luxuanwei/
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Docker-Linux安装篇"><span class="nav-number">1.</span> <span class="nav-text">Docker Linux安装篇</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Docker-基本概念"><span class="nav-number">2.</span> <span class="nav-text">Docker 基本概念</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Docker-常用命令"><span class="nav-number">3.</span> <span class="nav-text">Docker 常用命令</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#蜂巢使用命令"><span class="nav-number">4.</span> <span class="nav-text">蜂巢使用命令</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#oracle基本操作"><span class="nav-number">1.</span> <span class="nav-text">oracle基本操作</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#登陆操作"><span class="nav-number">1.1.</span> <span class="nav-text">登陆操作</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#导出oracle数据库文件"><span class="nav-number">1.2.</span> <span class="nav-text">导出oracle数据库文件</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#oracle常用代码"><span class="nav-number">2.</span> <span class="nav-text">oracle常用代码</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#创建表空间"><span class="nav-number">2.1.</span> <span class="nav-text">创建表空间</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#创建用户"><span class="nav-number">2.2.</span> <span class="nav-text">创建用户</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#权限管理"><span class="nav-number">2.3.</span> <span class="nav-text">权限管理</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#创建表"><span class="nav-number">2.4.</span> <span class="nav-text">创建表</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#数据库操纵语言"><span class="nav-number">2.5.</span> <span class="nav-text">数据库操纵语言</span></a></li></ol></li></ol></div>
             
           </div>
           <div class="post-toc-indicator-bottom post-toc-indicator">
