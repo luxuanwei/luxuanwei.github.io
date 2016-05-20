@@ -41,7 +41,7 @@
 <link href="/css/main.css?v=0.5.0" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Java," />
+  <meta name="keywords" content="Hibernate," />
 
 
 
@@ -57,25 +57,16 @@
 
 
 
-<meta name="description" content="简介Node.js是一个基于Chrome JavaScript运行时建立的平台， 用于方便地搭建响应速度快、易于扩展的网络应用。
-Node.js 使用事件驱动， 非阻塞I/O 模型而得以轻量和高效，非常适合在分布式设备上运行的数据密集型的实时应用。
-nodejs 常用命令console.log(&amp;quot;Hello World&amp;quot;);    输出
-搭建gitbook准备：安装 node">
+<meta name="description" content="Session常用类">
 <meta property="og:type" content="article">
-<meta property="og:title" content="nodejs常用案例分析 ">
-<meta property="og:url" content="http://yoursite.com/2016/03/15/nodejs入门及应用/index.html">
+<meta property="og:title" content=" Session存取与关联操作 ">
+<meta property="og:url" content="http://yoursite.com/2016/04/27/Session存取与关联操作/index.html">
 <meta property="og:site_name" content="Day Dreaming">
-<meta property="og:description" content="简介Node.js是一个基于Chrome JavaScript运行时建立的平台， 用于方便地搭建响应速度快、易于扩展的网络应用。
-Node.js 使用事件驱动， 非阻塞I/O 模型而得以轻量和高效，非常适合在分布式设备上运行的数据密集型的实时应用。
-nodejs 常用命令console.log(&amp;quot;Hello World&amp;quot;);    输出
-搭建gitbook准备：安装 node">
-<meta property="og:updated_time" content="2016-03-16T12:09:44.763Z">
+<meta property="og:description" content="Session常用类">
+<meta property="og:updated_time" content="2016-04-27T07:26:05.691Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="nodejs常用案例分析 ">
-<meta name="twitter:description" content="简介Node.js是一个基于Chrome JavaScript运行时建立的平台， 用于方便地搭建响应速度快、易于扩展的网络应用。
-Node.js 使用事件驱动， 非阻塞I/O 模型而得以轻量和高效，非常适合在分布式设备上运行的数据密集型的实时应用。
-nodejs 常用命令console.log(&amp;quot;Hello World&amp;quot;);    输出
-搭建gitbook准备：安装 node">
+<meta name="twitter:title" content=" Session存取与关联操作 ">
+<meta name="twitter:description" content="Session常用类">
 
 
 
@@ -93,7 +84,7 @@ nodejs 常用命令console.log(&amp;quot;Hello World&amp;quot;);    输出
   };
 </script>
 
-  <title> nodejs常用案例分析  | Day Dreaming </title>
+  <title>  Session存取与关联操作  | Day Dreaming </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -213,7 +204,7 @@ nodejs 常用命令console.log(&amp;quot;Hello World&amp;quot;);    输出
             
             
               
-                nodejs常用案例分析 
+                 Session存取与关联操作 
               
             
           </h1>
@@ -225,8 +216,8 @@ nodejs 常用命令console.log(&amp;quot;Hello World&amp;quot;);    输出
               <i class="fa fa-calendar-o"></i>
             </span>
             <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-03-15T17:02:42+08:00" content="2016-03-15">
-              2016-03-15
+            <time itemprop="dateCreated" datetime="2016-04-27T14:38:42+08:00" content="2016-04-27">
+              2016-04-27
             </time>
           </span>
 
@@ -253,27 +244,7 @@ nodejs 常用命令console.log(&amp;quot;Hello World&amp;quot;);    输出
 
       
         <hr>
-<h2 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h2><p>Node.js是一个基于Chrome JavaScript运行时建立的平台， 用于方便地搭建响应速度快、易于扩展的网络应用。</p>
-<p>Node.js 使用事件驱动， 非阻塞I/O 模型而得以轻量和高效，非常适合在分布式设备上运行的数据密集型的实时应用。</p>
-<h2 id="nodejs-常用命令"><a href="#nodejs-常用命令" class="headerlink" title="nodejs 常用命令"></a>nodejs 常用命令</h2><pre><code>console.log(&quot;Hello World&quot;);    输出
-</code></pre><h2 id="搭建gitbook"><a href="#搭建gitbook" class="headerlink" title="搭建gitbook"></a>搭建gitbook</h2><p>准备：安装 node.js</p>
-<p>第一步：安装gitbook</p>
-<pre><code>npm install gitbook -gitbook
-</code></pre><p>第二步：准备两个基本文件</p>
-<ul>
-<li><p>README.md</p>
-</li>
-<li><p>SUMMARY.md</p>
-</li>
-</ul>
-<p>第三步：本地运行</p>
-<pre><code>gitbook serve -p 8080
-</code></pre><h2 id="搭建hexo-博客"><a href="#搭建hexo-博客" class="headerlink" title="搭建hexo 博客"></a>搭建hexo 博客</h2><p>具体见 “通过github和hexo布局博客”</p>
-<pre><code>npm install -g hexo
-npm install hexo-server
-npm install hexo-deployer-git --save
-</code></pre><hr>
-
+<h2 id="Session常用类"><a href="#Session常用类" class="headerlink" title="Session常用类"></a>Session常用类</h2>
       
     </div>
 
@@ -287,7 +258,7 @@ npm install hexo-deployer-git --save
       
         <div class="post-tags">
           
-            <a href="/tags/Java/" rel="tag">#Java</a>
+            <a href="/tags/Hibernate/" rel="tag">#Hibernate</a>
           
         </div>
       
@@ -296,17 +267,13 @@ npm install hexo-deployer-git --save
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2016/03/15/Linux常用shell命令/" rel="next" title="Linux下最常用的Shell命令 ">
-                <i class="fa fa-chevron-left"></i> Linux下最常用的Shell命令 
+              <a href="/2016/04/27/github的简易用法/" rel="next" title="github的简易用法 ">
+                <i class="fa fa-chevron-left"></i> github的简易用法 
               </a>
             
           </div>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2016/03/15/Linux常用命令/" rel="prev" title="Linux 常用命令 ">
-                Linux 常用命令  <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -418,7 +385,7 @@ npm install hexo-deployer-git --save
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#简介"><span class="nav-number">1.</span> <span class="nav-text">简介</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#nodejs-常用命令"><span class="nav-number">2.</span> <span class="nav-text">nodejs 常用命令</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#搭建gitbook"><span class="nav-number">3.</span> <span class="nav-text">搭建gitbook</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#搭建hexo-博客"><span class="nav-number">4.</span> <span class="nav-text">搭建hexo 博客</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Session常用类"><span class="nav-number">1.</span> <span class="nav-text">Session常用类</span></a></li></ol></div>
             
           </div>
           <div class="post-toc-indicator-bottom post-toc-indicator">
